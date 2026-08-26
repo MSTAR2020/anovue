@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="安诺视AI智能识别技术详解，涵盖人形检测、移动追踪、区域入侵、异常行为、夜视增强、门铃访客识别、智能编码优化七大核心能力。" />
+  <title>AI智能识别 | 安诺视科技</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            deep: { 900: '#0B1120', 800: '#111827', 700: '#1E293B', 600: '#334155' },
+            brand: { 400: '#38BDF8', 500: '#3B82F6', 600: '#2563EB' },
+          },
+          fontFamily: {
+            sans: ['"PingFang SC"', '"Microsoft YaHei"', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .text-gradient { background: linear-gradient(135deg, #fff 0%, #38BDF8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  </style>
+</head>
+<body class="bg-deep-900 text-slate-100 font-sans antialiased overflow-x-hidden">
+
+  <header class="header fixed top-0 left-0 w-full z-50 transition-all duration-300 py-5">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="logo flex items-center gap-3 text-xl font-bold">
+          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-500 to-brand-400 flex items-center justify-center text-white shadow-lg">◆</div>
+          <span>安诺视科技</span>
+        </a>
+        <nav class="nav-links hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <a href="index.html" class="hover:text-white transition-colors">首页</a>
+          <a href="products.html" class="hover:text-white transition-colors">产品中心</a>
+          <a href="ai.html" class="active text-white relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-brand-400">AI智能识别</a>
+          <a href="scenarios.html" class="hover:text-white transition-colors">场景方案</a>
+          <a href="about.html" class="hover:text-white transition-colors">关于我们</a>
+        </nav>
+        <div class="nav-cta hidden lg:block">
+          <a href="about.html#contact" class="inline-flex items-center px-5 py-2.5 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white text-sm font-semibold shadow-lg hover:shadow-brand-500/40 transition-all hover:-translate-y-0.5">联系我们</a>
+        </div>
+        <button class="mobile-menu-btn lg:hidden flex flex-col gap-1.5 p-2" aria-label="菜单">
+          <span class="w-6 h-0.5 bg-white rounded"></span>
+          <span class="w-6 h-0.5 bg-white rounded"></span>
+          <span class="w-6 h-0.5 bg-white rounded"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-full bg-deep-900/98 backdrop-blur-xl border-l border-slate-700 z-[60] translate-x-full transition-transform duration-300 p-8 pt-24">
+    <a href="index.html" class="block py-4 border-b border-slate-700 text-slate-300 hover:text-white">首页</a>
+    <a href="products.html" class="block py-4 border-b border-slate-700 text-slate-300 hover:text-white">产品中心</a>
+    <a href="ai.html" class="active block py-4 border-b border-slate-700 text-brand-400">AI智能识别</a>
+    <a href="scenarios.html" class="block py-4 border-b border-slate-700 text-slate-300 hover:text-white">场景方案</a>
+    <a href="about.html" class="block py-4 border-b border-slate-700 text-slate-300 hover:text-white">关于我们</a>
+    <a href="about.html#contact" class="block py-4 text-slate-300 hover:text-white">联系我们</a>
+  </div>
+  <div class="overlay fixed inset-0 bg-black/60 z-[55] hidden"></div>
+
+  <section class="page-hero pt-40 pb-20 bg-gradient-to-b from-brand-500/10 to-deep-900 border-b border-slate-700 text-center">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-gradient">AI 智能识别技术</h1>
+      <p class="text-slate-400 max-w-2xl mx-auto mb-6">全系安防设备搭载新一代 AI 智能识别算法，告别传统被动录像监控，实现主动智能安防预警。</p>
+      <div class="flex justify-center gap-2 text-sm text-slate-500">
+        <a href="index.html" class="hover:text-brand-400">首页</a>
+        <span>/</span>
+        <span class="text-slate-300">AI 智能识别</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI 首屏 -->
+  <section class="section py-24">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="fade-in">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-500/10 border border-brand-400/30 text-brand-400 text-xs font-semibold mb-6">
+            <span class="w-2 h-2 rounded-full bg-green-400 shadow-[0_0_10px_#4ade80]"></span> 端侧智能 · 毫秒响应
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold mb-6">从“看得见”到<span class="text-gradient">看得懂</span></h2>
+          <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+            安诺视全系安防设备（IPC、智能门铃、监控摄像机）均搭载新一代 AI 智能识别算法。无需依赖云端即可完成人形、移动、区域入侵、异常行为等多类目标的精准识别，本地推理响应时间低于 200ms，误报率降低 90% 以上。
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="products.html" class="inline-flex items-center px-7 py-3.5 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white font-semibold shadow-lg hover:shadow-brand-500/40 transition-all hover:-translate-y-0.5">选购 AI 设备</a>
+            <a href="#capabilities" class="inline-flex items-center px-7 py-3.5 rounded-full border border-slate-600 text-white font-semibold hover:border-brand-400 hover:text-brand-400 transition-all">了解 7 大能力</a>
+          </div>
+        </div>
+        <div class="fade-in rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
+          <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20neural%20network%20visualization%20with%20security%20camera%20feeds%2C%20human%20and%20vehicle%20detection%20bounding%20boxes%2C%20glowing%20blue%20circuit%20patterns%2C%20dark%20tech%20background%2C%20futuristic%20deep%20learning%20concept&image_size=landscape_4_3" alt="AI 智能识别技术" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 大 AI 能力 -->
+  <section class="section py-24 bg-gradient-to-b from-brand-500/5 to-transparent" id="capabilities">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header text-center mb-16 fade-in">
+        <span class="inline-block px-4 py-1.5 rounded-full border border-brand-500 text-brand-400 text-xs font-semibold tracking-wider mb-4">7 CORE CAPABILITIES</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">七大核心 AI 识别能力</h2>
+        <p class="text-slate-400 max-w-2xl mx-auto">全系设备标配，主动识别、主动追踪、主动预警，真正实现智能安防。</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="ai-tech-card fade-in p-8 rounded-2xl bg-deep-700/50 border border-slate-700 hover:-translate-y-2 hover:border-brand-400/30 hover:shadow-xl hover:shadow-brand-500/10 transition-all">
+          <div class="w-16 h-16 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-400 text-3xl mb-6">👤</div>
+          <h3 class="text-xl font-bold mb-3">AI 人形精准识别</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">智能区分人体、车辆、宠物、杂物，有效过滤风吹草动、光影变化等无效误报，大幅降低告警干扰，精准锁定人员活动轨迹。</p>
+        </div>
+        <div class="ai-tech-card fade-in p-8 rounded-2xl bg-deep-700/50 border border-slate-700 hover:-translate-y-2 hover:border-brand-400/30 hover:shadow-xl hover:shadow-brand-500/10 transition-all">
+          <div class="w-16 h-16 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-400 text-3xl mb-6">🎯</div>
+          <h3 class="text-xl font-bold mb-3">AI 移动追踪识别</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">检测到异常人员移动后，设备自动聚焦、跟随追踪、锁定目标，自动录制关键视频，确保不遗漏任何关键画面。</p>
+        </div>
+        <div class="ai-tech-card fade-in p-8 rounded-2xl bg-deep-700/50 border border-slate-700 hover:-translate-y-2 hover:border-brand-400/30 hover:shadow-xl hover:shadow-brand-500/10 transition-all">
+          <div class="w-16 h-16 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-400 text-3xl mb-6">🚧</div>
+          <h3 class="text-xl font-bold mb-3">AI 区域入侵识别</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">支持自定义警戒区域、越界侦测、逗留侦测，有人闯入设定禁区立即推送告警信息，适用于厂区、仓库、围墙、楼道禁区安防。</p>
+        </div>
+        <div class="ai-tech-card fade-in p-8 rounded-2xl bg-deep-700/50 border border-slate-700 hover:-translate-y-2 hover:border-brand-400/30 hover:shadow-xl hover:shadow-brand-500/10 transition-all">
+          <div class="w-16 h-16 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-400 text-3xl mb-6">⚠️</div>
+          <h3 class="text-xl font-bold mb-3">AI 异常行为识别</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">支持徘徊、逗留、快速奔跑、聚众停留等行为识别，智能判定异常风险，主动预警，防患于未然。</p>
+        </div>
+        <div class="ai-tech-card fade-in p-8 rounded-2xl bg-deep-700/50 border border-slate-700 hover:-translate-y-2 hover:border-brand-400/30 hover:shadow-xl hover:shadow-brand-500/10 transition-all">
+          <div class="w-16 h-16 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-400 text-3xl mb-6">🌙</div>
+          <h3 class="text-xl font-bold mb-3">智能夜视 AI 增强识别</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">夜间低光、全黑环境下，通过 AI 图像降噪、画面增强算法提升夜视清晰度，优化人物轮廓识别精度，夜间识别不失效。</p>
+        </div>
+        <div class="ai-tech-card fade-in p-8 rounded-2xl bg-deep-700/50 border border-slate-700 hover:-translate-y-2 hover:border-brand-400/30 hover:shadow-xl hover:shadow-brand-500/10 transition-all">
+          <div class="w-16 h-16 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-400 text-3xl mb-6">🚪</div>
+          <h3 class="text-xl font-bold mb-3">智能门铃 AI 访客识别</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">精准识别门前人员逗留、陌生人靠近、久停逗留，区分正常访客与可疑人员，远程实时提醒，家门安全触手可及。</p>
+        </div>
+        <div class="ai-tech-card fade-in md:col-span-2 lg:col-span-1 p-8 rounded-2xl bg-deep-700/50 border border-slate-700 hover:-translate-y-2 hover:border-brand-400/30 hover:shadow-xl hover:shadow-brand-500/10 transition-all">
+          <div class="w-16 h-16 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-400 text-3xl mb-6">⚙️</div>
+          <h3 class="text-xl font-bold mb-3">AI 智能编码优化</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">根据场景自动调节码率、帧率、画质，兼顾高清画面与存储节省，智能压缩视频资源，节省硬盘与云端存储空间。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 工作原理 -->
+  <section class="section py-24">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header text-center mb-16 fade-in">
+        <span class="inline-block px-4 py-1.5 rounded-full border border-brand-500 text-brand-400 text-xs font-semibold tracking-wider mb-4">HOW IT WORKS</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">AI 识别工作原理</h2>
+        <p class="text-slate-400 max-w-2xl mx-auto">从画面采集到智能告警，全流程在端侧完成，快、准、安全。</p>
+      </div>
+      <div class="grid md:grid-cols-5 gap-6 relative">
+        <div class="hidden md:block absolute top-10 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-brand-500 to-brand-400"></div>
+        <div class="process-step fade-in text-center relative z-10">
+          <div class="w-20 h-20 mx-auto mb-5 rounded-full bg-deep-900 border-2 border-brand-400 flex items-center justify-center text-2xl font-extrabold text-brand-400">01</div>
+          <h4 class="font-bold mb-2">图像采集</h4>
+          <p class="text-slate-400 text-sm">高灵敏度 Sensor 捕捉画面，HDR 与 3D 降噪确保成像清晰。</p>
+        </div>
+        <div class="process-step fade-in text-center relative z-10">
+          <div class="w-20 h-20 mx-auto mb-5 rounded-full bg-deep-900 border-2 border-brand-400 flex items-center justify-center text-2xl font-extrabold text-brand-400">02</div>
+          <h4 class="font-bold mb-2">目标检测</h4>
+          <p class="text-slate-400 text-sm">端侧 NPU 运行深度学习模型，快速定位人、车、物等目标。</p>
+        </div>
+        <div class="process-step fade-in text-center relative z-10">
+          <div class="w-20 h-20 mx-auto mb-5 rounded-full bg-deep-900 border-2 border-brand-400 flex items-center justify-center text-2xl font-extrabold text-brand-400">03</div>
+          <h4 class="font-bold mb-2">特征比对</h4>
+          <p class="text-slate-400 text-sm">与本地库进行特征匹配，区分正常与异常目标。</p>
+        </div>
+        <div class="process-step fade-in text-center relative z-10">
+          <div class="w-20 h-20 mx-auto mb-5 rounded-full bg-deep-900 border-2 border-brand-400 flex items-center justify-center text-2xl font-extrabold text-brand-400">04</div>
+          <h4 class="font-bold mb-2">智能决策</h4>
+          <p class="text-slate-400 text-sm">结合时间与空间规则，判断是否触发告警或联动。</p>
+        </div>
+        <div class="process-step fade-in text-center relative z-10">
+          <div class="w-20 h-20 mx-auto mb-5 rounded-full bg-deep-900 border-2 border-brand-400 flex items-center justify-center text-2xl font-extrabold text-brand-400">05</div>
+          <h4 class="font-bold mb-2">实时推送</h4>
+          <p class="text-slate-400 text-sm">关键信息加密上传 APP，用户毫秒级收到精准告警。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 应用效果 -->
+  <section class="section py-24 bg-gradient-to-b from-brand-500/5 to-transparent">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header text-center mb-16 fade-in">
+        <span class="inline-block px-4 py-1.5 rounded-full border border-brand-500 text-brand-400 text-xs font-semibold tracking-wider mb-4">APPLICATION EFFECT</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">AI 带来的真实改变</h2>
+        <p class="text-slate-400 max-w-2xl mx-auto">不仅是看得清，更是让安防从被动录像转变为主动防御。</p>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="fade-in rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
+          <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Split%20screen%20comparison%20of%20traditional%20CCTV%20blur%20vs%20AI%20enhanced%20clear%20night%20vision%2C%20showing%20human%20silhouette%20detection%20with%20green%20bounding%20box%2C%20smart%20surveillance%20concept%2C%20dark%20blue%20tech%20style&image_size=landscape_4_3" alt="AI 识别效果对比" />
+        </div>
+        <div class="grid gap-5">
+          <div class="ai-demo-item fade-in flex items-center gap-4 p-5 rounded-xl bg-deep-700/50 border border-slate-700">
+            <div class="w-8 h-8 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-sm font-bold flex-shrink-0">✓</div>
+            <div><h4 class="font-bold mb-1">误报率降低 90%</h4><p class="text-slate-400 text-sm">AI 人形过滤后只剩真正需要关注的事件，风吹草动不再打扰。</p></div>
+          </div>
+          <div class="ai-demo-item fade-in flex items-center gap-4 p-5 rounded-xl bg-deep-700/50 border border-slate-700">
+            <div class="w-8 h-8 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-sm font-bold flex-shrink-0">✓</div>
+            <div><h4 class="font-bold mb-1">响应速度提升 5 倍</h4><p class="text-slate-400 text-sm">端侧推理无需等待云端往返，告警推送从秒级降至毫秒级。</p></div>
+          </div>
+          <div class="ai-demo-item fade-in flex items-center gap-4 p-5 rounded-xl bg-deep-700/50 border border-slate-700">
+            <div class="w-8 h-8 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-sm font-bold flex-shrink-0">✓</div>
+            <div><h4 class="font-bold mb-1">存储成本节省 50%</h4><p class="text-slate-400 text-sm">智能触发录像与 AI 编码优化双管齐下，只录关键画面。</p></div>
+          </div>
+          <div class="ai-demo-item fade-in flex items-center gap-4 p-5 rounded-xl bg-deep-700/50 border border-slate-700">
+            <div class="w-8 h-8 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-sm font-bold flex-shrink-0">✓</div>
+            <div><h4 class="font-bold mb-1">夜间识别不失效</h4><p class="text-slate-400 text-sm">AI 夜视增强让低光、全黑环境下的人物轮廓依然清晰可辨。</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section py-20 bg-gradient-to-r from-brand-500/10 to-brand-400/10 border-y border-slate-700">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+      <h2 class="text-3xl font-bold mb-4">体验 AI 安防的强大能力</h2>
+      <p class="text-slate-400 mb-8 max-w-xl mx-auto">预约免费演示，让我们的安防专家为您展示真实的 AI 识别效果。</p>
+      <a href="about.html#contact" class="inline-flex items-center px-8 py-3.5 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white font-semibold shadow-lg hover:shadow-brand-500/40 transition-all hover:-translate-y-0.5">预约演示</a>
+    </div>
+  </section>
+
+  <footer class="footer bg-deep-800 pt-16 pb-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="footer-grid grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="footer-brand">
+          <a href="index.html" class="logo flex items-center gap-3 text-xl font-bold mb-4">
+            <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-500 to-brand-400 flex items-center justify-center text-white">◆</div>
+            <span>安诺视科技</span>
+          </a>
+          <p class="text-slate-400 text-sm leading-relaxed mb-5">安诺视科技专注于智能安防设备的研发、制造与服务，产品远销全球 80 多个国家和地区。</p>
+          <div class="footer-social flex gap-3">
+            <a href="#" class="w-9 h-9 rounded-full bg-deep-700 border border-slate-600 flex items-center justify-center text-sm hover:bg-brand-500 hover:border-brand-500 transition-colors">微信</a>
+            <a href="#" class="w-9 h-9 rounded-full bg-deep-700 border border-slate-600 flex items-center justify-center text-sm hover:bg-brand-500 hover:border-brand-500 transition-colors">微博</a>
+            <a href="#" class="w-9 h-9 rounded-full bg-deep-700 border border-slate-600 flex items-center justify-center text-sm hover:bg-brand-500 hover:border-brand-500 transition-colors">邮箱</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="font-bold mb-5">产品中心</h4>
+          <ul class="space-y-3 text-sm text-slate-400">
+            <li><a href="products.html" class="hover:text-brand-400 transition-colors">IPC 网络摄像机</a></li>
+            <li><a href="products.html" class="hover:text-brand-400 transition-colors">智能可视门铃</a></li>
+            <li><a href="products.html" class="hover:text-brand-400 transition-colors">高清监控摄像机</a></li>
+            <li><a href="product-detail.html" class="hover:text-brand-400 transition-colors">产品参数详情</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="font-bold mb-5">解决方案</h4>
+          <ul class="space-y-3 text-sm text-slate-400">
+            <li><a href="scenarios.html" class="hover:text-brand-400 transition-colors">家用安防</a></li>
+            <li><a href="scenarios.html" class="hover:text-brand-400 transition-colors">商铺安防</a></li>
+            <li><a href="scenarios.html" class="hover:text-brand-400 transition-colors">厂区/园区安防</a></li>
+            <li><a href="scenarios.html" class="hover:text-brand-400 transition-colors">楼宇安防</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="font-bold mb-5">联系我们</h4>
+          <ul class="space-y-3 text-sm text-slate-400">
+            <li class="flex gap-2"><span>📍</span> 深圳市宝安区沙井逻辑工业园C栋4楼</li>
+            <li class="flex gap-2"><span>📞</span> 400-888-6688</li>
+            <li class="flex gap-2"><span>✉️</span> sales@ruishian.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom border-t border-slate-700 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-slate-500">
+        <span>© 2026 安诺视科技 RuiShiAn Technology. 保留所有权利。</span>
+        <span>粤 ICP 备 12345678 号</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

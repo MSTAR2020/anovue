@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="安诺视场景解决方案，涵盖家用、商铺、厂区、园区、楼宇安防，提供定制化部署方案。" />
+  <title>场景解决方案 | 安诺视科技</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            deep: { 900: '#0B1120', 800: '#111827', 700: '#1E293B', 600: '#334155' },
+            brand: { 400: '#38BDF8', 500: '#3B82F6', 600: '#2563EB' },
+          },
+          fontFamily: {
+            sans: ['"PingFang SC"', '"Microsoft YaHei"', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .text-gradient { background: linear-gradient(135deg, #fff 0%, #38BDF8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  </style>
+</head>
+<body class="bg-deep-900 text-slate-100 font-sans antialiased overflow-x-hidden">
+
+  <header class="header fixed top-0 left-0 w-full z-50 transition-all duration-300 py-5">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="logo flex items-center gap-3 text-xl font-bold">
+          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-500 to-brand-400 flex items-center justify-center text-white shadow-lg">◆</div>
+          <span>安诺视科技</span>
+        </a>
+        <nav class="nav-links hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <a href="index.html" class="hover:text-white transition-colors">首页</a>
+          <a href="products.html" class="hover:text-white transition-colors">产品中心</a>
+          <a href="ai.html" class="hover:text-white transition-colors">AI智能识别</a>
+          <a href="scenarios.html" class="active text-white relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-brand-400">场景方案</a>
+          <a href="about.html" class="hover:text-white transition-colors">关于我们</a>
+        </nav>
+        <div class="nav-cta hidden lg:block">
+          <a href="about.html#contact" class="inline-flex items-center px-5 py-2.5 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white text-sm font-semibold shadow-lg hover:shadow-brand-500/40 transition-all hover:-translate-y-0.5">联系我们</a>
+        </div>
+        <button class="mobile-menu-btn lg:hidden flex flex-col gap-1.5 p-2" aria-label="菜单">
+          <span class="w-6 h-0.5 bg-white rounded"></span>
+          <span class="w-6 h-0.5 bg-white rounded"></span>
+          <span class="w-6 h-0.5 bg-white rounded"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-full bg-deep-900/98 backdrop-blur-xl border-l border-slate-700 z-[60] translate-x-full transition-transform duration-300 p-8 pt-24">
+    <a href="index.html" class="block py-4 border-b border-slate-700 text-slate-300 hover:text-white">首页</a>
+    <a href="products.html" class="block py-4 border-b border-slate-700 text-slate-300 hover:text-white">产品中心</a>
+    <a href="ai.html" class="block py-4 border-b border-slate-700 text-slate-300 hover:text-white">AI智能识别</a>
+    <a href="scenarios.html" class="active block py-4 border-b border-slate-700 text-brand-400">场景方案</a>
+    <a href="about.html" class="block py-4 border-b border-slate-700 text-slate-300 hover:text-white">关于我们</a>
+    <a href="about.html#contact" class="block py-4 text-slate-300 hover:text-white">联系我们</a>
+  </div>
+  <div class="overlay fixed inset-0 bg-black/60 z-[55] hidden"></div>
+
+  <section class="page-hero pt-40 pb-20 bg-gradient-to-b from-brand-500/10 to-deep-900 border-b border-slate-700 text-center">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-gradient">场景解决方案</h1>
+      <p class="text-slate-400 max-w-2xl mx-auto mb-6">从家庭到企业，从室内到室外，我们为每一种场景量身打造可靠、智能的安防体系。</p>
+      <div class="flex justify-center gap-2 text-sm text-slate-500">
+        <a href="index.html" class="hover:text-brand-400">首页</a>
+        <span>/</span>
+        <span class="text-slate-300">场景解决方案</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section py-24">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- 家用 -->
+      <div class="solution-card grid lg:grid-cols-2 gap-12 items-center mb-24" id="home-scenario">
+        <div class="fade-in rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
+          <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Modern%20smart%20home%20security%20system%20with%20video%20doorbell%2C%20outdoor%20camera%2C%20and%20indoor%20camera%2C%20family%20house%20at%20twilight%2C%20warm%20safe%20atmosphere%2C%20professional%20lifestyle%20photography&image_size=landscape_16_9" alt="家用安防方案" />
+        </div>
+        <div class="fade-in">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-brand-500/10 text-brand-400 text-xs font-semibold mb-4">家用安防</span>
+          <h2 class="text-3xl font-bold mb-4">全天候守护家的每一个角落</h2>
+          <p class="text-slate-400 mb-6 leading-relaxed">针对家庭入户、庭院、车库、老人/儿童看护场景，提供可视门铃、室内外摄像机、智能传感器一体化方案。AI 识别家人与陌生人，哭声、摔倒等异常事件实时推送。</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 可视门铃 + 门前包裹检测</li>
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 庭院全彩夜视摄像机</li>
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 室内云台看护，支持双向语音</li>
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 家人/陌生人 AI 识别，减少误报</li>
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 手机 APP 远程查看与告警</li>
+          </ul>
+          <a href="about.html#contact" class="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white font-semibold shadow-lg hover:shadow-brand-500/40 transition-all hover:-translate-y-0.5">获取家庭方案</a>
+        </div>
+      </div>
+
+      <!-- 商铺 -->
+      <div class="solution-card grid lg:grid-cols-2 gap-12 items-center mb-24" id="shop-scenario">
+        <div class="fade-in lg:order-2 rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
+          <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Retail%20store%20interior%20with%20multiple%20ceiling%20security%20cameras%2C%20checkout%20counter%2C%20clean%20modern%20shop%20design%2C%20bright%20LED%20lighting%2C%20professional%20commercial%20photography&image_size=landscape_16_9" alt="商铺安防方案" />
+        </div>
+        <div class="fade-in lg:order-1">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-brand-500/10 text-brand-400 text-xs font-semibold mb-4">商铺安防</span>
+          <h2 class="text-3xl font-bold mb-4">开店无忧，经营可视</h2>
+          <p class="text-slate-400 mb-6 leading-relaxed">面向便利店、商超、餐饮、专卖店，实现防盗、防损、客流分析、员工管理一体化。夜间自动切换全彩夜视，配合声光告警有效震慑不法分子。</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 出入口客流统计与热区分析</li>
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 收银台异常行为监控</li>
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 非营业时间入侵告警</li>
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 手机远程巡店，支持多店管理</li>
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 录像存储 30~90 天可调</li>
+          </ul>
+          <a href="about.html#contact" class="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white font-semibold shadow-lg hover:shadow-brand-500/40 transition-all hover:-translate-y-0.5">获取商铺方案</a>
+        </div>
+      </div>
+
+      <!-- 厂区 -->
+      <div class="solution-card grid lg:grid-cols-2 gap-12 items-center mb-24" id="factory-scenario">
+        <div class="fade-in rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
+          <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20factory%20perimeter%20security%20with%20tall%20fencing%2C%20multiple%20PTZ%20cameras%20on%20poles%2C%20warehouse%20buildings%2C%20blue%20hour%20industrial%20photography%2C%20professional%20security%20deployment&image_size=landscape_16_9" alt="厂区安防方案" />
+        </div>
+        <div class="fade-in">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-brand-500/10 text-brand-400 text-xs font-semibold mb-4">厂区安防</span>
+          <h2 class="text-3xl font-bold mb-4">安全生产，周界可控</h2>
+          <p class="text-slate-400 mb-6 leading-relaxed">针对工厂、仓库、物流园区，提供周界防范、人车分流、安全帽识别、烟火检测等工业级方案。IP67/IP68 防护，-30℃~60℃ 稳定运行。</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 电子围栏与越界检测</li>
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 安全帽/反光衣 AI 识别</li>
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 车辆车牌识别与进出管理</li>
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 烟火/烟雾早期预警</li>
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 对接企业门禁与考勤系统</li>
+          </ul>
+          <a href="about.html#contact" class="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white font-semibold shadow-lg hover:shadow-brand-500/40 transition-all hover:-translate-y-0.5">获取厂区方案</a>
+        </div>
+      </div>
+
+      <!-- 园区 -->
+      <div class="solution-card grid lg:grid-cols-2 gap-12 items-center mb-24" id="park-scenario">
+        <div class="fade-in lg:order-2 rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
+          <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Modern%20business%20park%20with%20green%20landscape%2C%20security%20cameras%20on%20poles%2C%20parking%20lot%20entrance%20with%20license%20plate%20recognition%2C%20clean%20safe%20environment%2C%20professional%20real%20estate%20photography&image_size=landscape_16_9" alt="园区安防方案" />
+        </div>
+        <div class="fade-in lg:order-1">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-brand-500/10 text-brand-400 text-xs font-semibold mb-4">园区安防</span>
+          <h2 class="text-3xl font-bold mb-4">人车通行，智慧管理</h2>
+          <p class="text-slate-400 mb-6 leading-relaxed">面向产业园区、校园、医院、社区，构建车辆管控、人员轨迹、重点区域防范的综合安防平台。支持车牌白名单、黑名单布控，提升管理效率。</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 车牌识别道闸联动</li>
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 人脸识别门禁一体机</li>
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 重点区域徘徊/聚集检测</li>
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 多摄像头轨迹接力追踪</li>
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 综合管理大屏可视化</li>
+          </ul>
+          <a href="about.html#contact" class="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white font-semibold shadow-lg hover:shadow-brand-500/40 transition-all hover:-translate-y-0.5">获取园区方案</a>
+        </div>
+      </div>
+
+      <!-- 楼宇 -->
+      <div class="solution-card grid lg:grid-cols-2 gap-12 items-center" id="building-scenario">
+        <div class="fade-in rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
+          <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Modern%20high-rise%20office%20building%20lobby%20with%20facial%20recognition%20access%20control%2C%20security%20cameras%2C%20elevator%20area%2C%20professional%20corporate%20building%20security%20photography&image_size=landscape_16_9" alt="楼宇安防方案" />
+        </div>
+        <div class="fade-in">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-brand-500/10 text-brand-400 text-xs font-semibold mb-4">楼宇安防</span>
+          <h2 class="text-3xl font-bold mb-4">智能楼宇，安全高效</h2>
+          <p class="text-slate-400 mb-6 leading-relaxed">针对写字楼、公寓、酒店、商业综合体，提供门禁、梯控、消防联动、访客管理一体化方案。AI 人脸识别实现无感通行，提升入驻体验。</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 人脸识别门禁与梯控</li>
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 访客预约与临时授权</li>
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 消防通道占用检测</li>
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 电梯轿厢异常行为识别</li>
+            <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="w-6 h-6 rounded-full bg-green-500/15 text-green-400 flex items-center justify-center text-xs">✓</span> 物业统一管理平台</li>
+          </ul>
+          <a href="about.html#contact" class="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white font-semibold shadow-lg hover:shadow-brand-500/40 transition-all hover:-translate-y-0.5">获取楼宇方案</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section py-20 bg-gradient-to-r from-brand-500/10 to-brand-400/10 border-y border-slate-700">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+      <h2 class="text-3xl font-bold mb-4">不确定选哪个方案？</h2>
+      <p class="text-slate-400 mb-8 max-w-xl mx-auto">告诉我们您的场景与需求，专业工程师 1 对 1 为您设计安防部署方案。</p>
+      <a href="about.html#contact" class="inline-flex items-center px-8 py-3.5 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white font-semibold shadow-lg hover:shadow-brand-500/40 transition-all hover:-translate-y-0.5">免费方案设计</a>
+    </div>
+  </section>
+
+  <footer class="footer bg-deep-800 pt-16 pb-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="footer-grid grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="footer-brand">
+          <a href="index.html" class="logo flex items-center gap-3 text-xl font-bold mb-4">
+            <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-500 to-brand-400 flex items-center justify-center text-white">◆</div>
+            <span>安诺视科技</span>
+          </a>
+          <p class="text-slate-400 text-sm leading-relaxed mb-5">安诺视科技专注于智能安防设备的研发、制造与服务，产品远销全球 80 多个国家和地区。</p>
+          <div class="footer-social flex gap-3">
+            <a href="#" class="w-9 h-9 rounded-full bg-deep-700 border border-slate-600 flex items-center justify-center text-sm hover:bg-brand-500 hover:border-brand-500 transition-colors">微</a>
+            <a href="#" class="w-9 h-9 rounded-full bg-deep-700 border border-slate-600 flex items-center justify-center text-sm hover:bg-brand-500 hover:border-brand-500 transition-colors">博</a>
+            <a href="#" class="w-9 h-9 rounded-full bg-deep-700 border border-slate-600 flex items-center justify-center text-sm hover:bg-brand-500 hover:border-brand-500 transition-colors">邮</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="font-bold mb-5">产品中心</h4>
+          <ul class="space-y-3 text-sm text-slate-400">
+            <li><a href="products.html" class="hover:text-brand-400 transition-colors">IPC 网络摄像机</a></li>
+            <li><a href="products.html" class="hover:text-brand-400 transition-colors">智能可视门铃</a></li>
+            <li><a href="products.html" class="hover:text-brand-400 transition-colors">高清监控摄像机</a></li>
+            <li><a href="product-detail.html" class="hover:text-brand-400 transition-colors">产品参数详情</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="font-bold mb-5">解决方案</h4>
+          <ul class="space-y-3 text-sm text-slate-400">
+            <li><a href="scenarios.html" class="hover:text-brand-400 transition-colors">家用安防</a></li>
+            <li><a href="scenarios.html" class="hover:text-brand-400 transition-colors">商铺安防</a></li>
+            <li><a href="scenarios.html" class="hover:text-brand-400 transition-colors">厂区/园区安防</a></li>
+            <li><a href="scenarios.html" class="hover:text-brand-400 transition-colors">楼宇安防</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="font-bold mb-5">联系我们</h4>
+          <ul class="space-y-3 text-sm text-slate-400">
+            <li class="flex gap-2"><span>📍</span> 深圳市宝安区沙井逻辑工业园C栋4楼</li>
+            <li class="flex gap-2"><span>📞</span> 400-888-6688</li>
+            <li class="flex gap-2"><span>✉️</span> sales@ruishian.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom border-t border-slate-700 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-slate-500">
+        <span>© 2026 安诺视科技 Anovue Technology. 保留所有权利。</span>
+        <span>粤 ICP 备 12345678 号</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

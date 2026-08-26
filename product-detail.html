@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="安诺视全系产品完整参数详情，涵盖IPC网络摄像机、智能可视门铃、高清监控摄像机固定参数。" />
+  <title>产品参数详情 | 安诺视科技</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            deep: { 900: '#0B1120', 800: '#111827', 700: '#1E293B', 600: '#334155' },
+            brand: { 400: '#38BDF8', 500: '#3B82F6', 600: '#2563EB' },
+          },
+          fontFamily: {
+            sans: ['"PingFang SC"', '"Microsoft YaHei"', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .text-gradient { background: linear-gradient(135deg, #fff 0%, #38BDF8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  </style>
+</head>
+<body class="bg-deep-900 text-slate-100 font-sans antialiased overflow-x-hidden">
+
+  <header class="header fixed top-0 left-0 w-full z-50 transition-all duration-300 py-5">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="logo flex items-center gap-3 text-xl font-bold">
+          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-500 to-brand-400 flex items-center justify-center text-white shadow-lg">◆</div>
+          <span>安诺视科技</span>
+        </a>
+        <nav class="nav-links hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <a href="index.html" class="hover:text-white transition-colors">首页</a>
+          <a href="products.html" class="hover:text-white transition-colors">产品中心</a>
+          <a href="ai.html" class="hover:text-white transition-colors">AI智能识别</a>
+          <a href="scenarios.html" class="hover:text-white transition-colors">场景方案</a>
+          <a href="about.html" class="hover:text-white transition-colors">关于我们</a>
+        </nav>
+        <div class="nav-cta hidden lg:block">
+          <a href="about.html#contact" class="inline-flex items-center px-5 py-2.5 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white text-sm font-semibold shadow-lg hover:shadow-brand-500/40 transition-all hover:-translate-y-0.5">联系我们</a>
+        </div>
+        <button class="mobile-menu-btn lg:hidden flex flex-col gap-1.5 p-2" aria-label="菜单">
+          <span class="w-6 h-0.5 bg-white rounded"></span>
+          <span class="w-6 h-0.5 bg-white rounded"></span>
+          <span class="w-6 h-0.5 bg-white rounded"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-full bg-deep-900/98 backdrop-blur-xl border-l border-slate-700 z-[60] translate-x-full transition-transform duration-300 p-8 pt-24">
+    <a href="index.html" class="block py-4 border-b border-slate-700 text-slate-300 hover:text-white">首页</a>
+    <a href="products.html" class="block py-4 border-b border-slate-700 text-slate-300 hover:text-white">产品中心</a>
+    <a href="ai.html" class="block py-4 border-b border-slate-700 text-slate-300 hover:text-white">AI智能识别</a>
+    <a href="scenarios.html" class="block py-4 border-b border-slate-700 text-slate-300 hover:text-white">场景方案</a>
+    <a href="about.html" class="block py-4 border-b border-slate-700 text-slate-300 hover:text-white">关于我们</a>
+    <a href="about.html#contact" class="block py-4 text-slate-300 hover:text-white">联系我们</a>
+  </div>
+  <div class="overlay fixed inset-0 bg-black/60 z-[55] hidden"></div>
+
+  <section class="page-hero pt-40 pb-20 bg-gradient-to-b from-brand-500/10 to-deep-900 border-b border-slate-700 text-center">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-gradient">产品参数详情</h1>
+      <p class="text-slate-400 max-w-2xl mx-auto mb-6">全系产品固定参数一览，满足工程级选型与部署需求。</p>
+      <div class="flex justify-center gap-2 text-sm text-slate-500">
+        <a href="index.html" class="hover:text-brand-400">首页</a>
+        <span>/</span>
+        <a href="products.html" class="hover:text-brand-400">产品中心</a>
+        <span>/</span>
+        <span class="text-slate-300">产品参数详情</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section py-24">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- IPC 参数 -->
+      <div class="mb-20 fade-in">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-14 h-14 rounded-xl bg-brand-500/10 flex items-center justify-center text-brand-400 text-2xl">📹</div>
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-bold">IPC 网络摄像机固定参数</h2>
+            <p class="text-slate-400 text-sm">全系 IPC 产品均具备以下核心参数与能力</p>
+          </div>
+        </div>
+        <div class="overflow-x-auto rounded-2xl border border-slate-700">
+          <table class="w-full text-sm text-left">
+            <tbody class="divide-y divide-slate-700">
+              <tr class="bg-deep-700/30"><td class="w-1/3 px-6 py-4 text-slate-400">分辨率</td><td class="px-6 py-4 text-slate-100">1080P / 2K / 4K 超清可选，支持多码流输出</td></tr>
+              <tr><td class="px-6 py-4 text-slate-400">HDR 逆光矫正</td><td class="px-6 py-4 text-slate-100">支持 120dB 宽动态，逆光环境下人脸与车牌清晰可见</td></tr>
+              <tr class="bg-deep-700/30"><td class="px-6 py-4 text-slate-400">夜视能力</td><td class="px-6 py-4 text-slate-100">红外夜视 + 智能全彩夜视，最大 50m 补光距离</td></tr>
+              <tr><td class="px-6 py-4 text-slate-400">AI 人形侦测</td><td class="px-6 py-4 text-slate-100">端侧 AI 人形识别，过滤误报，支持移动追踪与区域入侵</td></tr>
+              <tr class="bg-deep-700/30"><td class="px-6 py-4 text-slate-400">双向语音</td><td class="px-6 py-4 text-slate-100">内置高保真麦克风与扬声器，支持远程双向对讲</td></tr>
+              <tr><td class="px-6 py-4 text-slate-400">网络传输</td><td class="px-6 py-4 text-slate-100">WiFi / 有线双传输，支持 PoE 供电，自适应网络切换</td></tr>
+              <tr class="bg-deep-700/30"><td class="px-6 py-4 text-slate-400">户外防护</td><td class="px-6 py-4 text-slate-100">IP67 防尘防水，-30℃~60℃ 宽温工作，防雷击设计</td></tr>
+              <tr><td class="px-6 py-4 text-slate-400">镜头焦距</td><td class="px-6 py-4 text-slate-100">2.8mm / 4mm / 6mm 多焦距可选，覆盖 90°~50° 视角</td></tr>
+              <tr class="bg-deep-700/30"><td class="px-6 py-4 text-slate-400">存储方式</td><td class="px-6 py-4 text-slate-100">支持 NVR 接入、Micro SD 卡（最大 512GB）与云端存储</td></tr>
+              <tr><td class="px-6 py-4 text-slate-400">参数调试</td><td class="px-6 py-4 text-slate-100">支持参数自定义调试，包括码率、帧率、分辨率、灵敏度等</td></tr>
+              <tr class="bg-deep-700/30"><td class="px-6 py-4 text-slate-400">视频编码</td><td class="px-6 py-4 text-slate-100">H.265 / H.264 / H.265+ 智能编码，节省 50% 存储</td></tr>
+              <tr><td class="px-6 py-4 text-slate-400">网络协议</td><td class="px-6 py-4 text-slate-100">ONVIF / RTSP / GB28181 / TCP/IP / DHCP / DDNS</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 智能门铃参数 -->
+      <div class="mb-20 fade-in">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-14 h-14 rounded-xl bg-brand-500/10 flex items-center justify-center text-brand-400 text-2xl">🚪</div>
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-bold">智能可视门铃固定参数</h2>
+            <p class="text-slate-400 text-sm">全系智能门铃产品均具备以下核心参数与能力</p>
+          </div>
+        </div>
+        <div class="overflow-x-auto rounded-2xl border border-slate-700">
+          <table class="w-full text-sm text-left">
+            <tbody class="divide-y divide-slate-700">
+              <tr class="bg-deep-700/30"><td class="w-1/3 px-6 py-4 text-slate-400">视频画质</td><td class="px-6 py-4 text-slate-100">2K 超清广角，水平视角 ≥ 160°，垂直视角 ≥ 90°</td></tr>
+              <tr><td class="px-6 py-4 text-slate-400">AI 人体雷达双重感应</td><td class="px-6 py-4 text-slate-100">PIR 红外感应 + AI 人形识别双重校验，有效降低误触发</td></tr>
+              <tr class="bg-deep-700/30"><td class="px-6 py-4 text-slate-400">夜视成像</td><td class="px-6 py-4 text-slate-100">红外夜视 + 低照度全彩，夜间 5m 范围内清晰可见</td></tr>
+              <tr><td class="px-6 py-4 text-slate-400">双向对讲</td><td class="px-6 py-4 text-slate-100">支持远程实时双向语音对讲，内置回声消除与降噪</td></tr>
+              <tr class="bg-deep-700/30"><td class="px-6 py-4 text-slate-400">远程告警</td><td class="px-6 py-4 text-slate-100">访客按铃、逗留、陌生人靠近等事件实时推送 APP</td></tr>
+              <tr><td class="px-6 py-4 text-slate-400">续航能力</td><td class="px-6 py-4 text-slate-100">内置大容量锂电池，典型使用场景续航 3~6 个月</td></tr>
+              <tr class="bg-deep-700/30"><td class="px-6 py-4 text-slate-400">APP 实时预览回放</td><td class="px-6 py-4 text-slate-100">iOS / Android 双端 APP，实时预览、历史回放、云存储管理</td></tr>
+              <tr><td class="px-6 py-4 text-slate-400">逗留侦测</td><td class="px-6 py-4 text-slate-100">自定义逗留时长阈值，门口人员久停自动录像并告警</td></tr>
+              <tr class="bg-deep-700/30"><td class="px-6 py-4 text-slate-400">供电方式</td><td class="px-6 py-4 text-slate-100">电池供电 / 有线供电双模式，支持免打孔安装</td></tr>
+              <tr><td class="px-6 py-4 text-slate-400">存储方式</td><td class="px-6 py-4 text-slate-100">本地 SD 卡存储 + 云端事件录像，重要画面不丢失</td></tr>
+              <tr class="bg-deep-700/30"><td class="px-6 py-4 text-slate-400">防护等级</td><td class="px-6 py-4 text-slate-100">IP65 防水防尘，-20℃~50℃ 稳定工作</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 高清监控摄像机参数 -->
+      <div class="mb-20 fade-in">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-14 h-14 rounded-xl bg-brand-500/10 flex items-center justify-center text-brand-400 text-2xl">🔦</div>
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-bold">高清监控摄像机固定参数</h2>
+            <p class="text-slate-400 text-sm">全系高清监控摄像机均具备以下核心参数与能力</p>
+          </div>
+        </div>
+        <div class="overflow-x-auto rounded-2xl border border-slate-700">
+          <table class="w-full text-sm text-left">
+            <tbody class="divide-y divide-slate-700">
+              <tr class="bg-deep-700/30"><td class="w-1/3 px-6 py-4 text-slate-400">机型选择</td><td class="px-6 py-4 text-slate-100">全景球机 / 固定枪机可选，支持壁装、吊装、立杆装</td></tr>
+              <tr><td class="px-6 py-4 text-slate-400">360° 巡航</td><td class="px-6 py-4 text-slate-100">球机支持水平 360°、垂直 90° 旋转，支持预置点巡航</td></tr>
+              <tr class="bg-deep-700/30"><td class="px-6 py-4 text-slate-400">自动录像</td><td class="px-6 py-4 text-slate-100">支持定时录像、移动侦测录像、AI 事件触发录像</td></tr>
+              <tr><td class="px-6 py-4 text-slate-400">多重存储</td><td class="px-6 py-4 text-slate-100">本地 NVR、Micro SD 卡、FTP、NAS、云端存储多重备份</td></tr>
+              <tr class="bg-deep-700/30"><td class="px-6 py-4 text-slate-400">室内外通用</td><td class="px-6 py-4 text-slate-100">金属机身，IP67 防护，室内外全天候稳定运行</td></tr>
+              <tr><td class="px-6 py-4 text-slate-400">AI 智能告警</td><td class="px-6 py-4 text-slate-100">人形侦测、移动追踪、区域入侵、异常行为识别</td></tr>
+              <tr class="bg-deep-700/30"><td class="px-6 py-4 text-slate-400">批量参数配置</td><td class="px-6 py-4 text-slate-100">支持批量导入导出配置参数，大规模部署高效便捷</td></tr>
+              <tr><td class="px-6 py-4 text-slate-400">分辨率</td><td class="px-6 py-4 text-slate-100">300万 / 500万 / 800万 可选，最高支持 4K@25fps</td></tr>
+              <tr class="bg-deep-700/30"><td class="px-6 py-4 text-slate-400">夜视能力</td><td class="px-6 py-4 text-slate-100">红外夜视 + 智能双光全彩，最大 80m 补光</td></tr>
+              <tr><td class="px-6 py-4 text-slate-400">编码格式</td><td class="px-6 py-4 text-slate-100">H.265 / H.265+ / H.264，智能编码优化存储</td></tr>
+              <tr class="bg-deep-700/30"><td class="px-6 py-4 text-slate-400">网络接口</td><td class="px-6 py-4 text-slate-100">10M/100M/1000M 自适应网口，支持 PoE 802.3af/at</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 通用 AI 能力 -->
+      <div class="fade-in">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-14 h-14 rounded-xl bg-green-500/10 flex items-center justify-center text-green-400 text-2xl">🧠</div>
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-bold">全系通用 AI 能力</h2>
+            <p class="text-slate-400 text-sm">IPC、智能门铃、监控摄像机均搭载以下 AI 功能</p>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="p-6 rounded-xl bg-deep-700/50 border border-slate-700">
+            <h4 class="font-bold mb-2 text-brand-400">AI 人形精准识别</h4>
+            <p class="text-slate-400 text-sm">区分人体、车辆、宠物、杂物，过滤风吹草动与光影变化。</p>
+          </div>
+          <div class="p-6 rounded-xl bg-deep-700/50 border border-slate-700">
+            <h4 class="font-bold mb-2 text-brand-400">AI 移动追踪识别</h4>
+            <p class="text-slate-400 text-sm">自动聚焦、跟随追踪、锁定目标并录制关键视频。</p>
+          </div>
+          <div class="p-6 rounded-xl bg-deep-700/50 border border-slate-700">
+            <h4 class="font-bold mb-2 text-brand-400">AI 区域入侵识别</h4>
+            <p class="text-slate-400 text-sm">自定义警戒区域、越界侦测、逗留侦测，闯入立即告警。</p>
+          </div>
+          <div class="p-6 rounded-xl bg-deep-700/50 border border-slate-700">
+            <h4 class="font-bold mb-2 text-brand-400">AI 异常行为识别</h4>
+            <p class="text-slate-400 text-sm">识别徘徊、逗留、快速奔跑、聚众停留等异常行为。</p>
+          </div>
+          <div class="p-6 rounded-xl bg-deep-700/50 border border-slate-700">
+            <h4 class="font-bold mb-2 text-brand-400">智能夜视 AI 增强</h4>
+            <p class="text-slate-400 text-sm">AI 图像降噪与画面增强，提升夜间人物轮廓识别精度。</p>
+          </div>
+          <div class="p-6 rounded-xl bg-deep-700/50 border border-slate-700">
+            <h4 class="font-bold mb-2 text-brand-400">AI 智能编码优化</h4>
+            <p class="text-slate-400 text-sm">自动调节码率、帧率、画质，兼顾高清与存储节省。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section py-20 bg-gradient-to-r from-brand-500/10 to-brand-400/10 border-y border-slate-700">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+      <h2 class="text-3xl font-bold mb-4">需要完整规格书或批量报价？</h2>
+      <p class="text-slate-400 mb-8 max-w-xl mx-auto">提供 OEM/ODM 定制服务，支持 SDK 与私有协议对接。</p>
+      <a href="about.html#contact" class="inline-flex items-center px-8 py-3.5 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white font-semibold shadow-lg hover:shadow-brand-500/40 transition-all hover:-translate-y-0.5">联系销售</a>
+    </div>
+  </section>
+
+  <footer class="footer bg-deep-800 pt-16 pb-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="footer-grid grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="footer-brand">
+          <a href="index.html" class="logo flex items-center gap-3 text-xl font-bold mb-4">
+            <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-500 to-brand-400 flex items-center justify-center text-white">◆</div>
+            <span>安诺视科技</span>
+          </a>
+          <p class="text-slate-400 text-sm leading-relaxed mb-5">安诺视科技专注于智能安防设备的研发、制造与服务，产品远销全球 80 多个国家和地区。</p>
+          <div class="footer-social flex gap-3">
+            <a href="#" class="w-9 h-9 rounded-full bg-deep-700 border border-slate-600 flex items-center justify-center text-sm hover:bg-brand-500 hover:border-brand-500 transition-colors">微</a>
+            <a href="#" class="w-9 h-9 rounded-full bg-deep-700 border border-slate-600 flex items-center justify-center text-sm hover:bg-brand-500 hover:border-brand-500 transition-colors">博</a>
+            <a href="#" class="w-9 h-9 rounded-full bg-deep-700 border border-slate-600 flex items-center justify-center text-sm hover:bg-brand-500 hover:border-brand-500 transition-colors">邮</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="font-bold mb-5">产品中心</h4>
+          <ul class="space-y-3 text-sm text-slate-400">
+            <li><a href="products.html" class="hover:text-brand-400 transition-colors">IPC 网络摄像机</a></li>
+            <li><a href="products.html" class="hover:text-brand-400 transition-colors">智能可视门铃</a></li>
+            <li><a href="products.html" class="hover:text-brand-400 transition-colors">高清监控摄像机</a></li>
+            <li><a href="product-detail.html" class="hover:text-brand-400 transition-colors">产品参数详情</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="font-bold mb-5">解决方案</h4>
+          <ul class="space-y-3 text-sm text-slate-400">
+            <li><a href="scenarios.html" class="hover:text-brand-400 transition-colors">家用安防</a></li>
+            <li><a href="scenarios.html" class="hover:text-brand-400 transition-colors">商铺安防</a></li>
+            <li><a href="scenarios.html" class="hover:text-brand-400 transition-colors">厂区/园区安防</a></li>
+            <li><a href="scenarios.html" class="hover:text-brand-400 transition-colors">楼宇安防</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="font-bold mb-5">联系我们</h4>
+          <ul class="space-y-3 text-sm text-slate-400">
+            <li class="flex gap-2"><span>📍</span> 深圳市宝安区沙井逻辑工业园C栋4楼</li>
+            <li class="flex gap-2"><span>📞</span> 400-888-6688</li>
+            <li class="flex gap-2"><span>✉️</span> sales@ruishian.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom border-t border-slate-700 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-slate-500">
+        <span>© 2026 安诺视科技 Anovue Technology. 保留所有权利。</span>
+        <span>粤 ICP 备 12345678 号</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

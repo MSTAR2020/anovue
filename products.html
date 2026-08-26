@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="安诺视产品中心 - IPC网络摄像机、智能可视门铃、高清监控摄像机，查看详细硬件参数与AI功能。" />
+  <title>产品中心 | 安诺视科技</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            deep: { 900: '#0B1120', 800: '#111827', 700: '#1E293B', 600: '#334155' },
+            brand: { 400: '#38BDF8', 500: '#3B82F6', 600: '#2563EB' },
+          },
+          fontFamily: {
+            sans: ['"PingFang SC"', '"Microsoft YaHei"', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(14px); }
+    .text-gradient { background: linear-gradient(135deg, #fff 0%, #38BDF8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  </style>
+</head>
+<body class="bg-deep-900 text-slate-100 font-sans antialiased overflow-x-hidden">
+
+  <header class="header fixed top-0 left-0 w-full z-50 transition-all duration-300 py-5">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="logo flex items-center gap-3 text-xl font-bold">
+          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-500 to-brand-400 flex items-center justify-center text-white shadow-lg">◆</div>
+          <span>安诺视科技</span>
+        </a>
+        <nav class="nav-links hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <a href="index.html" class="hover:text-white transition-colors">首页</a>
+          <a href="products.html" class="active text-white relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-brand-400">产品中心</a>
+          <a href="ai.html" class="hover:text-white transition-colors">AI智能识别</a>
+          <a href="scenarios.html" class="hover:text-white transition-colors">场景方案</a>
+          <a href="about.html" class="hover:text-white transition-colors">关于我们</a>
+        </nav>
+        <div class="nav-cta hidden lg:block">
+          <a href="about.html#contact" class="inline-flex items-center px-5 py-2.5 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white text-sm font-semibold shadow-lg hover:shadow-brand-500/40 transition-all hover:-translate-y-0.5">联系我们</a>
+        </div>
+        <button class="mobile-menu-btn lg:hidden flex flex-col gap-1.5 p-2" aria-label="菜单">
+          <span class="w-6 h-0.5 bg-white rounded"></span>
+          <span class="w-6 h-0.5 bg-white rounded"></span>
+          <span class="w-6 h-0.5 bg-white rounded"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-full bg-deep-900/98 backdrop-blur-xl border-l border-slate-700 z-[60] translate-x-full transition-transform duration-300 p-8 pt-24">
+    <a href="index.html" class="block py-4 border-b border-slate-700 text-slate-300 hover:text-white">首页</a>
+    <a href="products.html" class="active block py-4 border-b border-slate-700 text-brand-400">产品中心</a>
+    <a href="ai.html" class="block py-4 border-b border-slate-700 text-slate-300 hover:text-white">AI智能识别</a>
+    <a href="scenarios.html" class="block py-4 border-b border-slate-700 text-slate-300 hover:text-white">场景方案</a>
+    <a href="about.html" class="block py-4 border-b border-slate-700 text-slate-300 hover:text-white">关于我们</a>
+    <a href="about.html#contact" class="block py-4 text-slate-300 hover:text-white">联系我们</a>
+  </div>
+  <div class="overlay fixed inset-0 bg-black/60 z-[55] hidden"></div>
+
+  <section class="page-hero pt-40 pb-20 bg-gradient-to-b from-brand-500/10 to-deep-900 border-b border-slate-700 text-center">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-gradient">产品中心</h1>
+      <p class="text-slate-400 max-w-2xl mx-auto mb-6">全系列 AI 智能安防硬件，从家用到工业级，满足多样化场景需求。</p>
+      <div class="flex justify-center gap-2 text-sm text-slate-500">
+        <a href="index.html" class="hover:text-brand-400">首页</a>
+        <span>/</span>
+        <span class="text-slate-300">产品中心</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section py-24">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="product-tabs fade-in flex flex-wrap justify-center gap-3 mb-12">
+        <button class="product-tab active px-6 py-2.5 rounded-full bg-brand-500 text-white text-sm font-semibold transition-all" data-category="all">全部产品</button>
+        <button class="product-tab px-6 py-2.5 rounded-full bg-deep-700 border border-slate-600 text-slate-300 text-sm font-semibold hover:border-brand-400 hover:text-brand-400 transition-all" data-category="ipc">IPC 网络摄像机</button>
+        <button class="product-tab px-6 py-2.5 rounded-full bg-deep-700 border border-slate-600 text-slate-300 text-sm font-semibold hover:border-brand-400 hover:text-brand-400 transition-all" data-category="doorbell">智能可视门铃</button>
+        <button class="product-tab px-6 py-2.5 rounded-full bg-deep-700 border border-slate-600 text-slate-300 text-sm font-semibold hover:border-brand-400 hover:text-brand-400 transition-all" data-category="camera">高清监控摄像机</button>
+      </div>
+
+      <div class="products-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- IPC -->
+        <div class="product-card fade-in bg-deep-700/50 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:border-brand-400/30 hover:shadow-xl hover:shadow-brand-500/10 transition-all" data-category="ipc">
+          <div class="product-image relative aspect-[4/3] overflow-hidden">
+            <span class="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-green-500 text-deep-900 text-xs font-bold">AI 版</span>
+            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20white%20dome%20IP%20security%20camera%20with%20blue%20status%20LED%2C%20ceiling%20mount%20design%2C%20clean%20product%20photography%20on%20dark%20gradient%20background%2C%20modern%20surveillance%20hardware&image_size=landscape_4_3" alt="RS-IPC400 智能半球" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+          </div>
+          <div class="product-info p-6">
+            <h3 class="text-xl font-bold mb-2">RS-IPC400 智能半球</h3>
+            <p class="text-slate-400 text-sm mb-4">1080P/2K/4K 超清可选，HDR 逆光矫正，人形侦测，WiFi/有线双传输，户外防水，支持 NVR 与云端存储。</p>
+            <div class="product-specs grid grid-cols-2 gap-2 mb-5">
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">📷</span> 1080P/2K/4K</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">🌙</span> 红外夜视</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">👤</span> 人形侦测</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">🌐</span> WiFi/有线</div>
+            </div>
+            <div class="product-actions flex gap-3">
+              <a href="product-detail.html" class="flex-1 text-center py-2.5 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white text-sm font-semibold hover:shadow-lg transition-all">查看参数</a>
+              <a href="about.html#contact" class="flex-1 text-center py-2.5 rounded-full border border-slate-600 text-white text-sm font-semibold hover:border-brand-400 hover:text-brand-400 transition-all">询价</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in bg-deep-700/50 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:border-brand-400/30 hover:shadow-xl hover:shadow-brand-500/10 transition-all" data-category="ipc">
+          <div class="product-image relative aspect-[4/3] overflow-hidden">
+            <span class="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-brand-400 text-deep-900 text-xs font-bold">4K</span>
+            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Sleek%20white%20bullet%20IP%20camera%20with%20large%20lens%2C%20outdoor%20weatherproof%20design%2C%20dual%20antennas%2C%20professional%20product%20photography%20on%20dark%20blue%20background%2C%20high-end%20security%20equipment&image_size=landscape_4_3" alt="RS-IPC800 超清枪机" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+          </div>
+          <div class="product-info p-6">
+            <h3 class="text-xl font-bold mb-2">RS-IPC800 超清枪机</h3>
+            <p class="text-slate-400 text-sm mb-4">4K 超清枪机，HDR 逆光矫正，红外夜视，双向语音，多焦距可选，户外防水，参数自定义调试。</p>
+            <div class="product-specs grid grid-cols-2 gap-2 mb-5">
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">📷</span> 4K 超清</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">🔆</span> HDR</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">🔊</span> 双向语音</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">💧</span> 户外防水</div>
+            </div>
+            <div class="product-actions flex gap-3">
+              <a href="product-detail.html" class="flex-1 text-center py-2.5 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white text-sm font-semibold hover:shadow-lg transition-all">查看参数</a>
+              <a href="about.html#contact" class="flex-1 text-center py-2.5 rounded-full border border-slate-600 text-white text-sm font-semibold hover:border-brand-400 hover:text-brand-400 transition-all">询价</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in bg-deep-700/50 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:border-brand-400/30 hover:shadow-xl hover:shadow-brand-500/10 transition-all" data-category="ipc">
+          <div class="product-image relative aspect-[4/3] overflow-hidden">
+            <span class="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-purple-500 text-white text-xs font-bold">PTZ</span>
+            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=White%20PTZ%20speed%20dome%20security%20camera%20with%20pan%20tilt%20zoom%20mechanism%2C%20outdoor%20surveillance%20device%2C%20professional%20product%20photography%20on%20dark%20background%2C%20modern%20CCTV%20hardware&image_size=landscape_4_3" alt="RS-IPC500P 云台球机" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+          </div>
+          <div class="product-info p-6">
+            <h3 class="text-xl font-bold mb-2">RS-IPC500P 云台球机</h3>
+            <p class="text-slate-400 text-sm mb-4">2K/4K 云台，360° 巡航，AI 移动追踪，自动录像，WiFi/有线双传输，支持 NVR 与云端存储。</p>
+            <div class="product-specs grid grid-cols-2 gap-2 mb-5">
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">🔄</span> 360° 巡航</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">🎯</span> AI 追踪</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">📹</span> 自动录像</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">☁️</span> 云/NVR</div>
+            </div>
+            <div class="product-actions flex gap-3">
+              <a href="product-detail.html" class="flex-1 text-center py-2.5 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white text-sm font-semibold hover:shadow-lg transition-all">查看参数</a>
+              <a href="about.html#contact" class="flex-1 text-center py-2.5 rounded-full border border-slate-600 text-white text-sm font-semibold hover:border-brand-400 hover:text-brand-400 transition-all">询价</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doorbell -->
+        <div class="product-card fade-in bg-deep-700/50 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:border-brand-400/30 hover:shadow-xl hover:shadow-brand-500/10 transition-all" data-category="doorbell">
+          <div class="product-image relative aspect-[4/3] overflow-hidden">
+            <span class="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-orange-500 text-white text-xs font-bold">热销</span>
+            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Modern%20wireless%20video%20doorbell%20camera%20in%20matte%20black%20finish%2C%20LED%20ring%20button%2C%20wall%20mounted%20on%20modern%20front%20door%2C%20smart%20home%20security%2C%20product%20photography&image_size=landscape_4_3" alt="RS-DB100 智能门铃" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+          </div>
+          <div class="product-info p-6">
+            <h3 class="text-xl font-bold mb-2">RS-DB100 智能门铃</h3>
+            <p class="text-slate-400 text-sm mb-4">2K 广角，AI 人体雷达双重感应，夜视成像，双向对讲，远程告警，长续航，APP 实时预览回放。</p>
+            <div class="product-specs grid grid-cols-2 gap-2 mb-5">
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">📷</span> 2K 广角</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">📡</span> 双重感应</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">🔊</span> 双向对讲</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">🔋</span> 长续航</div>
+            </div>
+            <div class="product-actions flex gap-3">
+              <a href="product-detail.html" class="flex-1 text-center py-2.5 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white text-sm font-semibold hover:shadow-lg transition-all">查看参数</a>
+              <a href="about.html#contact" class="flex-1 text-center py-2.5 rounded-full border border-slate-600 text-white text-sm font-semibold hover:border-brand-400 hover:text-brand-400 transition-all">询价</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in bg-deep-700/50 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:border-brand-400/30 hover:shadow-xl hover:shadow-brand-500/10 transition-all" data-category="doorbell">
+          <div class="product-image relative aspect-[4/3] overflow-hidden">
+            <span class="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-brand-400 text-deep-900 text-xs font-bold">双摄</span>
+            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Premium%20dual-lens%20video%20doorbell%20camera%20with%20fingerprint-resistant%20finish%2C%20package%20detection%20AI%20feature%2C%20modern%20smart%20home%20design%2C%20product%20photography%20on%20dark%20background&image_size=landscape_4_3" alt="RS-DB200 双摄门铃" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+          </div>
+          <div class="product-info p-6">
+            <h3 class="text-xl font-bold mb-2">RS-DB200 双摄门铃</h3>
+            <p class="text-slate-400 text-sm mb-4">前置+下置双摄，2K 广角，AI 人体雷达感应，逗留侦测，远程告警，长续航，云存储。</p>
+            <div class="product-specs grid grid-cols-2 gap-2 mb-5">
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">📹</span> 双摄双视角</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">📡</span> 雷达感应</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">⏱️</span> 逗留侦测</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">☁️</span> 云存储</div>
+            </div>
+            <div class="product-actions flex gap-3">
+              <a href="product-detail.html" class="flex-1 text-center py-2.5 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white text-sm font-semibold hover:shadow-lg transition-all">查看参数</a>
+              <a href="about.html#contact" class="flex-1 text-center py-2.5 rounded-full border border-slate-600 text-white text-sm font-semibold hover:border-brand-400 hover:text-brand-400 transition-all">询价</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in bg-deep-700/50 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:border-brand-400/30 hover:shadow-xl hover:shadow-brand-500/10 transition-all" data-category="doorbell">
+          <div class="product-image relative aspect-[4/3] overflow-hidden">
+            <span class="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-green-500 text-deep-900 text-xs font-bold">防水</span>
+            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Rugged%20outdoor%20video%20intercom%20doorbell%20with%20large%20screen%20and%20camera%2C%20weatherproof%20design%2C%20villa%20entrance%20security%2C%20professional%20product%20photography%20on%20dark%20background&image_size=landscape_4_3" alt="RS-DB300 可视对讲" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+          </div>
+          <div class="product-info p-6">
+            <h3 class="text-xl font-bold mb-2">RS-DB300 可视对讲</h3>
+            <p class="text-slate-400 text-sm mb-4">7 英寸室内屏可视对讲，2K 广角，AI 人体雷达感应，夜视成像，双向对讲，远程开锁，户外防水。</p>
+            <div class="product-specs grid grid-cols-2 gap-2 mb-5">
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">📺</span> 7" 室内屏</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">🔓</span> 远程开锁</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">📡</span> 雷达感应</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">💧</span> 户外防水</div>
+            </div>
+            <div class="product-actions flex gap-3">
+              <a href="product-detail.html" class="flex-1 text-center py-2.5 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white text-sm font-semibold hover:shadow-lg transition-all">查看参数</a>
+              <a href="about.html#contact" class="flex-1 text-center py-2.5 rounded-full border border-slate-600 text-white text-sm font-semibold hover:border-brand-400 hover:text-brand-400 transition-all">询价</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Camera -->
+        <div class="product-card fade-in bg-deep-700/50 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:border-brand-400/30 hover:shadow-xl hover:shadow-brand-500/10 transition-all" data-category="camera">
+          <div class="product-image relative aspect-[4/3] overflow-hidden">
+            <span class="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-yellow-500 text-deep-900 text-xs font-bold">全彩</span>
+            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=White%20outdoor%20bullet%20CCTV%20camera%20with%20warm%20white%20LED%20spotlights%20for%20full%20color%20night%20vision%2C%20modern%20security%20camera%2C%20product%20photography%20on%20dark%20background&image_size=landscape_4_3" alt="RS-CAM300 全彩筒机" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+          </div>
+          <div class="product-info p-6">
+            <h3 class="text-xl font-bold mb-2">RS-CAM300 全彩筒机</h3>
+            <p class="text-slate-400 text-sm mb-4">全景/枪机可选，360° 巡航，AI 智能告警，自动录像，多重存储，室内外通用，批量参数配置。</p>
+            <div class="product-specs grid grid-cols-2 gap-2 mb-5">
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">🔄</span> 360° 巡航</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">🧠</span> AI 告警</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">💾</span> 多重存储</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">⚙️</span> 批量配置</div>
+            </div>
+            <div class="product-actions flex gap-3">
+              <a href="product-detail.html" class="flex-1 text-center py-2.5 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white text-sm font-semibold hover:shadow-lg transition-all">查看参数</a>
+              <a href="about.html#contact" class="flex-1 text-center py-2.5 rounded-full border border-slate-600 text-white text-sm font-semibold hover:border-brand-400 hover:text-brand-400 transition-all">询价</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in bg-deep-700/50 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:border-brand-400/30 hover:shadow-xl hover:shadow-brand-500/10 transition-all" data-category="camera">
+          <div class="product-image relative aspect-[4/3] overflow-hidden">
+            <span class="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-red-500 text-white text-xs font-bold">防爆</span>
+            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Heavy-duty%20explosion-proof%20security%20camera%20in%20stainless%20steel%20housing%2C%20industrial%20surveillance%20equipment%2C%20oil%20refinery%20background%2C%20professional%20product%20photography&image_size=landscape_4_3" alt="RS-CAM500E 防爆摄像机" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+          </div>
+          <div class="product-info p-6">
+            <h3 class="text-xl font-bold mb-2">RS-CAM500E 防爆摄像机</h3>
+            <p class="text-slate-400 text-sm mb-4">工业级防爆枪机，固定/全景可选，AI 智能告警，多重存储，-40~60℃ 宽温，批量参数配置。</p>
+            <div class="product-specs grid grid-cols-2 gap-2 mb-5">
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">🔥</span> 防爆认证</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">🌡️</span> -40~60℃</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">🧠</span> AI 告警</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">⚙️</span> 批量配置</div>
+            </div>
+            <div class="product-actions flex gap-3">
+              <a href="product-detail.html" class="flex-1 text-center py-2.5 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white text-sm font-semibold hover:shadow-lg transition-all">查看参数</a>
+              <a href="about.html#contact" class="flex-1 text-center py-2.5 rounded-full border border-slate-600 text-white text-sm font-semibold hover:border-brand-400 hover:text-brand-400 transition-all">询价</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in bg-deep-700/50 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:border-brand-400/30 hover:shadow-xl hover:shadow-brand-500/10 transition-all" data-category="camera">
+          <div class="product-image relative aspect-[4/3] overflow-hidden">
+            <span class="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-blue-500 text-white text-xs font-bold">4G</span>
+            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Solar%20powered%204G%20security%20camera%20with%20detachable%20solar%20panel%2C%20outdoor%20wireless%20surveillance%2C%20green%20energy%20design%2C%20product%20photography%20on%20dark%20gradient%20background&image_size=landscape_4_3" alt="RS-CAM4G 太阳能 4G 相机" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+          </div>
+          <div class="product-info p-6">
+            <h3 class="text-xl font-bold mb-2">RS-CAM4G 太阳能 4G 相机</h3>
+            <p class="text-slate-400 text-sm mb-4">太阳能+4G 全网通，固定/全景可选，AI 智能告警，自动录像，多重存储，无电无网环境可用。</p>
+            <div class="product-specs grid grid-cols-2 gap-2 mb-5">
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">📶</span> 4G 全网通</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">☀️</span> 太阳能</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">🧠</span> AI 告警</div>
+              <div class="product-spec flex items-center gap-2 text-xs text-slate-400"><span class="text-brand-400">💾</span> 多重存储</div>
+            </div>
+            <div class="product-actions flex gap-3">
+              <a href="product-detail.html" class="flex-1 text-center py-2.5 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white text-sm font-semibold hover:shadow-lg transition-all">查看参数</a>
+              <a href="about.html#contact" class="flex-1 text-center py-2.5 rounded-full border border-slate-600 text-white text-sm font-semibold hover:border-brand-400 hover:text-brand-400 transition-all">询价</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section py-20 bg-gradient-to-r from-brand-500/10 to-brand-400/10 border-y border-slate-700">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+      <h2 class="text-3xl font-bold mb-4">没找到合适的产品？</h2>
+      <p class="text-slate-400 mb-8 max-w-xl mx-auto">我们支持 OEM/ODM 定制，欢迎联系获取专属产品方案与批量报价。</p>
+      <a href="about.html#contact" class="inline-flex items-center px-8 py-3.5 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white font-semibold shadow-lg hover:shadow-brand-500/40 transition-all hover:-translate-y-0.5">获取定制方案</a>
+    </div>
+  </section>
+
+  <footer class="footer bg-deep-800 pt-16 pb-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="footer-grid grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="footer-brand">
+          <a href="index.html" class="logo flex items-center gap-3 text-xl font-bold mb-4">
+            <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-500 to-brand-400 flex items-center justify-center text-white">◆</div>
+            <span>安诺视科技</span>
+          </a>
+          <p class="text-slate-400 text-sm leading-relaxed mb-5">安诺视科技专注于智能安防设备的研发、制造与服务，产品远销全球 80 多个国家和地区。</p>
+          <div class="footer-social flex gap-3">
+            <a href="#" class="w-9 h-9 rounded-full bg-deep-700 border border-slate-600 flex items-center justify-center text-sm hover:bg-brand-500 hover:border-brand-500 transition-colors">微</a>
+            <a href="#" class="w-9 h-9 rounded-full bg-deep-700 border border-slate-600 flex items-center justify-center text-sm hover:bg-brand-500 hover:border-brand-500 transition-colors">博</a>
+            <a href="#" class="w-9 h-9 rounded-full bg-deep-700 border border-slate-600 flex items-center justify-center text-sm hover:bg-brand-500 hover:border-brand-500 transition-colors">邮</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="font-bold mb-5">产品中心</h4>
+          <ul class="space-y-3 text-sm text-slate-400">
+            <li><a href="products.html" class="hover:text-brand-400 transition-colors">IPC 网络摄像机</a></li>
+            <li><a href="products.html" class="hover:text-brand-400 transition-colors">智能可视门铃</a></li>
+            <li><a href="products.html" class="hover:text-brand-400 transition-colors">高清监控摄像机</a></li>
+            <li><a href="product-detail.html" class="hover:text-brand-400 transition-colors">产品参数详情</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="font-bold mb-5">解决方案</h4>
+          <ul class="space-y-3 text-sm text-slate-400">
+            <li><a href="scenarios.html" class="hover:text-brand-400 transition-colors">家用安防</a></li>
+            <li><a href="scenarios.html" class="hover:text-brand-400 transition-colors">商铺安防</a></li>
+            <li><a href="scenarios.html" class="hover:text-brand-400 transition-colors">厂区/园区安防</a></li>
+            <li><a href="scenarios.html" class="hover:text-brand-400 transition-colors">楼宇安防</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="font-bold mb-5">联系我们</h4>
+          <ul class="space-y-3 text-sm text-slate-400">
+            <li class="flex gap-2"><span>📍</span> 深圳市宝安区沙井逻辑工业园C栋4楼</li>
+            <li class="flex gap-2"><span>📞</span> 400-888-6688</li>
+            <li class="flex gap-2"><span>✉️</span> sales@ruishian.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom border-t border-slate-700 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-slate-500">
+        <span>© 2026 安诺视科技 Anovue Technology. 保留所有权利。</span>
+        <span>粤 ICP 备 12345678 号</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
