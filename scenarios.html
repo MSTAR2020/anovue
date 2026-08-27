@@ -1,3 +1,8 @@
+<!--
+  scenarios.html - 安诺视科技安防企业官网
+  技术栈：HTML5 + TailwindCSS + JavaScript
+  说明：图片均可替换，详见 IMAGE_REPLACEMENT_GUIDE.md
+-->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -6,6 +11,7 @@
   <meta name="description" content="安诺视场景解决方案，涵盖家用、商铺、厂区、园区、楼宇安防，提供定制化部署方案。" />
   <title>场景解决方案 | 安诺视科技</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- TailwindCSS 自定义主题：deep（深蓝背景）、brand（品牌蓝） -->
   <script>
     tailwind.config = {
       theme: {
@@ -21,6 +27,7 @@
       },
     };
   </script>
+  <!-- 自定义动画与工具类（配合 Tailwind 使用） -->
   <style>
     .fade-in { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
@@ -82,6 +89,7 @@
       <!-- 家用 -->
       <div class="solution-card grid lg:grid-cols-2 gap-12 items-center mb-24" id="home-scenario">
         <div class="fade-in rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
+        <!-- 可替换图片：家用安防方案（scenarios.html 图片1） -->
           <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Modern%20smart%20home%20security%20system%20with%20video%20doorbell%2C%20outdoor%20camera%2C%20and%20indoor%20camera%2C%20family%20house%20at%20twilight%2C%20warm%20safe%20atmosphere%2C%20professional%20lifestyle%20photography&image_size=landscape_16_9" alt="家用安防方案" />
         </div>
         <div class="fade-in">
@@ -102,6 +110,7 @@
       <!-- 商铺 -->
       <div class="solution-card grid lg:grid-cols-2 gap-12 items-center mb-24" id="shop-scenario">
         <div class="fade-in lg:order-2 rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
+        <!-- 可替换图片：商铺安防方案（scenarios.html 图片2） -->
           <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Retail%20store%20interior%20with%20multiple%20ceiling%20security%20cameras%2C%20checkout%20counter%2C%20clean%20modern%20shop%20design%2C%20bright%20LED%20lighting%2C%20professional%20commercial%20photography&image_size=landscape_16_9" alt="商铺安防方案" />
         </div>
         <div class="fade-in lg:order-1">
@@ -122,6 +131,7 @@
       <!-- 厂区 -->
       <div class="solution-card grid lg:grid-cols-2 gap-12 items-center mb-24" id="factory-scenario">
         <div class="fade-in rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
+        <!-- 可替换图片：厂区安防方案（scenarios.html 图片3） -->
           <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20factory%20perimeter%20security%20with%20tall%20fencing%2C%20multiple%20PTZ%20cameras%20on%20poles%2C%20warehouse%20buildings%2C%20blue%20hour%20industrial%20photography%2C%20professional%20security%20deployment&image_size=landscape_16_9" alt="厂区安防方案" />
         </div>
         <div class="fade-in">
@@ -142,6 +152,7 @@
       <!-- 园区 -->
       <div class="solution-card grid lg:grid-cols-2 gap-12 items-center mb-24" id="park-scenario">
         <div class="fade-in lg:order-2 rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
+        <!-- 可替换图片：园区安防方案（scenarios.html 图片4） -->
           <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Modern%20business%20park%20with%20green%20landscape%2C%20security%20cameras%20on%20poles%2C%20parking%20lot%20entrance%20with%20license%20plate%20recognition%2C%20clean%20safe%20environment%2C%20professional%20real%20estate%20photography&image_size=landscape_16_9" alt="园区安防方案" />
         </div>
         <div class="fade-in lg:order-1">
@@ -162,6 +173,7 @@
       <!-- 楼宇 -->
       <div class="solution-card grid lg:grid-cols-2 gap-12 items-center" id="building-scenario">
         <div class="fade-in rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
+        <!-- 可替换图片：楼宇安防方案（scenarios.html 图片5） -->
           <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Modern%20high-rise%20office%20building%20lobby%20with%20facial%20recognition%20access%20control%2C%20security%20cameras%2C%20elevator%20area%2C%20professional%20corporate%20building%20security%20photography&image_size=landscape_16_9" alt="楼宇安防方案" />
         </div>
         <div class="fade-in">
@@ -210,7 +222,9 @@
             <li><a href="products.html" class="hover:text-brand-400 transition-colors">IPC 网络摄像机</a></li>
             <li><a href="products.html" class="hover:text-brand-400 transition-colors">智能可视门铃</a></li>
             <li><a href="products.html" class="hover:text-brand-400 transition-colors">高清监控摄像机</a></li>
-            <li><a href="product-detail.html" class="hover:text-brand-400 transition-colors">产品参数详情</a></li>
+            <li><a href="product-detail.html?category=ipc" class="hover:text-brand-400 transition-colors">IPC 参数</a></li>
+            <li><a href="product-detail.html?category=doorbell" class="hover:text-brand-400 transition-colors">门铃参数</a></li>
+            <li><a href="product-detail.html?category=camera" class="hover:text-brand-400 transition-colors">摄像机参数</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -227,12 +241,13 @@
           <ul class="space-y-3 text-sm text-slate-400">
             <li class="flex gap-2"><span>📍</span> 深圳市宝安区沙井逻辑工业园C栋4楼</li>
             <li class="flex gap-2"><span>📞</span> 400-888-6688</li>
-            <li class="flex gap-2"><span>✉️</span> sales@ruishian.com</li>
+            <li class="flex gap-2"><span>✉️</span> sales@anovue.com</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom border-t border-slate-700 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-slate-500">
         <span>© 2026 安诺视科技 Anovue Technology. 保留所有权利。</span>
+        <!-- TODO：请将以下 ICP 备案号替换为真实备案号 -->
         <span>粤 ICP 备 12345678 号</span>
       </div>
     </div>
